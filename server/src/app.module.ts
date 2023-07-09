@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { SequelizeModule } from "@nestjs/sequelize";
 import { ConfigModule } from "@nestjs/config";
 import { RoomModule } from './room/room.module';
+import { PlayerModule } from './player/player.module';
 
 @Module({
   controllers: [AppController],
@@ -23,6 +24,7 @@ import { RoomModule } from './room/room.module';
       autoLoadModels: true,
     }),
     RoomModule,
+    PlayerModule,
   ],
 
 })
